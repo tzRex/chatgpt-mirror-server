@@ -2,6 +2,8 @@
 # registry.cn-beijing.aliyuncs.com/
 set -e
 
+git pull
+
 gf build main.go -a amd64 -s linux
 gf docker main.go -t xyhelper/chatgpt-mirror-server:latest
 # 修改镜像标签为当前日期时间
